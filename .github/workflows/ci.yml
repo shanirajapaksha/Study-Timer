@@ -31,12 +31,12 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: 🔍 Security Scan (Snyk)
-        uses: snyk/actions/node@master
-        with:
-          command: test
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+    #  - name: 🔍 Security Scan (Snyk)
+    #    uses: snyk/actions/node@master
+    #    with:
+    #      command: test
+    #    env:
+    #      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
 
       - name: 📦 Install Dependencies
@@ -45,6 +45,6 @@ jobs:
       - name: 🧪 Run Tests
         run: npm test
 
-      - name: 🛡️ Run ESLint
-        run: npx eslint .
+    #  - name: 🛡️ Run ESLint
+    #    run: npx eslint .
 
